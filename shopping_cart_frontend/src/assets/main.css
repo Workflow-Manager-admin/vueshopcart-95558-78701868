@@ -40,7 +40,7 @@ a:hover {
   }
 }
 
-/* Breakpoint: 1024px - typical laptop */
+/* Breakpoint: 1024px - typical laptop, and ALL wider laptop screens */
 @media (min-width: 1024px) {
   #app {
     padding: 2.2rem 2rem 2.5rem 2rem;
@@ -48,21 +48,4 @@ a:hover {
     font-size: 1.09rem;
   }
 }
-
-/* Breakpoint: 1280px - large laptop, 2K screens */
-@media (min-width: 1280px) {
-  #app {
-    padding: 2.7rem 3rem 3rem 3rem;
-    max-width: 1400px;
-    font-size: 1.13rem;
-  }
-}
-
-/* Breakpoint: 1440px+ - extra large screens */
-@media (min-width: 1440px) {
-  #app {
-    padding: 3.2rem 4.2rem 3.8rem 4.2rem;
-    max-width: 1580px;
-    font-size: 1.16rem;
-  }
-}
+/* For 1280px and above, keep styles identical to 1024px (no further upscaling) */

@@ -51,27 +51,12 @@ const getQtyInCart = (pid: number) => {
   }
 }
 
-/* 1024px: Typical laptop - slightly wider, more roomy gaps */
+/* 1024px and up: Use same 3-column grid and gaps for all large laptop screens */
 @media (min-width: 1024px) {
   .product-list {
-    grid-template-columns: repeat(3, 1fr); /* 4 is crowded until 1280 */
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.4rem 1.9rem;
   }
 }
-
-/* 1280px: 4 columns, bigger gap */
-@media (min-width: 1280px) {
-  .product-list {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.7rem 2.4rem;
-  }
-}
-
-/* 1440px: 4 columns, very broad gap for luxury of space */
-@media (min-width: 1440px) {
-  .product-list {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2.2rem 3rem;
-  }
-}
+/* Remove 1280px and 1440px overrides; all use the 1024px grid */
 </style>

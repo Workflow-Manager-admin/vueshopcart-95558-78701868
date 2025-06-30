@@ -163,7 +163,7 @@ function removeAll(productId: number) {
   }
 }
 
-/* LAPTOP 1024PX - extra padding, font upsize */
+/* LAPTOP 1024PX - and up: apply same styling for all wide screens */
 @media (min-width: 1024px) {
   .cart-summary {
     max-width: 400px;
@@ -182,44 +182,5 @@ function removeAll(productId: number) {
     font-size: 1.24rem;
   }
 }
-
-/* 1280px - wider sidebar, more upsize */
-@media (min-width: 1280px) {
-  .cart-summary {
-    max-width: 440px;
-    font-size: 1.17rem;
-    padding: 1.65rem 1.33rem 1.17rem 1.33rem;
-  }
-  .cart-summary h3 {
-    font-size: 1.27rem;
-  }
-  .btn.secondary {
-    font-size: 1.08rem;
-    padding: 0.36rem 1.29rem;
-    min-width: 110px;
-  }
-  .cart-total {
-    font-size: 1.31rem;
-  }
-}
-
-/* 1440px - maximum comfort, everything roomy */
-@media (min-width: 1440px) {
-  .cart-summary {
-    max-width: 520px;
-    font-size: 1.21rem;
-    padding: 1.93rem 1.77rem 1.41rem 1.77rem;
-  }
-  .cart-summary h3 {
-    font-size: 1.36rem;
-  }
-  .btn.secondary {
-    font-size: 1.18rem;
-    padding: 0.41rem 1.49rem;
-    min-width: 130px;
-  }
-  .cart-total {
-    font-size: 1.39rem;
-  }
-}
+/* Removed 1280px and 1440px: 1024px styles now apply up for all wider screens */
 </style>

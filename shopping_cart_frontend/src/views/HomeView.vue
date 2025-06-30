@@ -42,7 +42,7 @@ import CartSummary from '../components/CartSummary.vue'
   }
 }
 
-/* 1024px: Switch to row layout, sidebar, more breathing room */
+/* 1024px and up: Use the same layout and sidebar/gap as 1024px for all wider screens */
 @media (min-width: 1024px) {
   .home-layout {
     flex-direction: row;
@@ -68,31 +68,5 @@ import CartSummary from '../components/CartSummary.vue'
     margin: 0;
   }
 }
-
-/* 1280px: Sidebar slightly wider, more horizontal gap */
-@media (min-width: 1280px) {
-  .home-layout {
-    gap: 3rem;
-  }
-  .cart-section {
-    width: 350px;
-    max-width: 410px;
-    margin-left: 2.2rem;
-    top: 2.4rem;
-  }
-}
-
-/* 1440px: Large layouts, extra roomy grid */
-@media (min-width: 1440px) {
-  .home-layout {
-    gap: 3.7rem;
-  }
-  .cart-section {
-    width: 390px;
-    max-width: 480px;
-    margin-left: 3.2rem;
-    top: 2.9rem;
-  }
-}
-
+/* Removed overrides for 1280px and 1440px – all use the 1024px rules above */
 </style>

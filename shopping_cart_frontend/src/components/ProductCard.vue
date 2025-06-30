@@ -179,7 +179,7 @@ defineEmits(['add', 'remove'])
   }
 }
 
-/* 1024px: Extra space, upsize a bit */
+/* 1024px and up: unified style for all large screens */
 @media (min-width: 1024px) {
   .product-card {
     padding: 1.25rem 1.14rem 1.32rem 1.14rem;
@@ -206,60 +206,5 @@ defineEmits(['add', 'remove'])
     font-size: 1.09rem;
   }
 }
-
-/* 1280px: Even roomier, font upsize */
-@media (min-width: 1280px) {
-  .product-card {
-    padding: 1.5rem 1.26rem 1.65rem 1.26rem;
-  }
-  .product-img {
-    width: 148px;
-    height: 148px;
-  }
-  .product-title {
-    font-size: 1.26rem;
-  }
-  .product-desc {
-    font-size: 1.18rem;
-  }
-  .btn {
-    font-size: 1.11rem;
-    padding: 0.36rem 1.57rem;
-    min-width: 120px;
-  }
-  .cart-qty {
-    font-size: 1.15rem;
-  }
-}
-
-/* 1440px: Large screens - max comfort, extra upsize all */
-@media (min-width: 1440px) {
-  .product-card {
-    padding: 1.8rem 1.44rem 1.95rem 1.44rem;
-    margin: 0.81rem 0;
-  }
-  .product-img {
-    width: 170px;
-    height: 170px;
-    margin-bottom: 1.1rem;
-  }
-  .product-title {
-    font-size: 1.36rem;
-  }
-  .product-desc {
-    font-size: 1.23rem;
-    min-height: 2.7em;
-  }
-  .btn {
-    font-size: 1.17rem;
-    padding: 0.43rem 1.95rem;
-    min-width: 140px;
-  }
-  .product-actions {
-    gap: 1.2rem;
-  }
-  .cart-qty {
-    font-size: 1.21rem;
-  }
-}
+/* Removed 1280px and 1440px: apply 1024px rules for all laptop widths */
 </style>
