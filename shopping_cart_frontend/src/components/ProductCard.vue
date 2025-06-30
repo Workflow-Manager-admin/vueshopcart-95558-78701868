@@ -40,13 +40,14 @@ defineEmits(['add', 'remove'])
 .product-card {
   background: white;
   border-radius: 1rem;
-  padding: 1.5rem;
+  padding: 1.16rem 1rem 1.18rem 1rem;
   box-shadow: 0 4px 18px rgba(44, 62, 80, 0.07), 0 1.5px 4px rgba(76, 175, 80, 0.07);
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: box-shadow 0.18s;
   margin: 0.5rem 0;
+  min-width: 0;
 }
 
 .product-card:hover {
@@ -54,16 +55,16 @@ defineEmits(['add', 'remove'])
 }
 
 .product-img {
-  width: 110px;
-  height: 110px;
+  width: 105px;
+  height: 105px;
   border-radius: 0.7rem;
   object-fit: cover;
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.64rem;
   background: #f2f2f2;
 }
 
 .product-title {
-  font-size: 1.2rem;
+  font-size: 1.12rem;
   font-weight: bold;
   color: var(--primary-color);
   margin-bottom: 0.3rem;
@@ -72,10 +73,10 @@ defineEmits(['add', 'remove'])
 
 .product-desc {
   color: #444;
-  font-size: 0.9rem;
-  margin-bottom: 0.7rem;
+  font-size: 0.91rem;
+  margin-bottom: 0.67rem;
   text-align: center;
-  min-height: 2.5em;
+  min-height: 2.2em;
 }
 
 .product-footer {
@@ -83,22 +84,23 @@ defineEmits(['add', 'remove'])
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  margin-top: 0.18rem;
 }
 
 .product-price {
   color: var(--accent-color);
   font-weight: 600;
-  font-size: 1.15rem;
-  margin-right: 0.75rem;
+  font-size: 1.12rem;
+  margin-right: 0.61rem;
 }
 
 .product-actions {
   display: flex;
-  gap: 0.3rem;
+  gap: 0.25rem;
 }
 
 .btn {
-  padding: 0.38rem 1.2rem;
+  padding: 0.37rem 1.09rem;
   border: none;
   border-radius: 0.5rem;
   font-size: 0.95rem;
@@ -122,8 +124,46 @@ defineEmits(['add', 'remove'])
 }
 
 .cart-qty {
-  font-size: 0.96rem;
+  font-size: 0.93rem;
   color: var(--secondary-color);
-  margin-top: 0.4rem;
+  margin-top: 0.37rem;
+}
+
+@media (max-width: 700px) {
+  .product-card {
+    padding: 0.8rem 0.6rem 0.9rem 0.6rem;
+  }
+  .product-img {
+    width: 86px;
+    height: 86px;
+    margin-bottom: 0.55rem;
+  }
+  .product-title {
+    font-size: 1.01rem;
+  }
+  .product-desc {
+    font-size: 0.86rem;
+  }
+  .product-footer {
+    margin-top: 0.08rem;
+  }
+  .btn {
+    font-size: 0.88rem;
+    padding: 0.23rem 0.7rem;
+    min-width: 60px;
+  }
+  .cart-qty {
+    font-size: 0.88rem;
+  }
+}
+
+@media (max-width: 410px) {
+  .product-card {
+    padding: 0.5rem 0.16rem 0.5rem 0.16rem;
+  }
+  .product-img {
+    width: 67px;
+    height: 67px;
+  }
 }
 </style>

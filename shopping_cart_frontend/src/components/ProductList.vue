@@ -30,8 +30,29 @@ const getQtyInCart = (pid: number) => {
 .product-list {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 1.2rem;
+  grid-template-columns: 1fr;
+  gap: 1.1rem;
   margin-top: 0.3rem;
+}
+
+@media (min-width: 480px) {
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.15rem 1.15rem;
+  }
+}
+
+@media (min-width: 700px) {
+  .product-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.22rem 1.7rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .product-list {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.4rem 2.1rem;
+  }
 }
 </style>

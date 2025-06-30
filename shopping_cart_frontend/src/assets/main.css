@@ -2,6 +2,7 @@
 
 body {
   background: var(--color-background);
+  min-width: 0;
 }
 
 #app {
@@ -10,6 +11,9 @@ body {
   padding: 2.2rem 1.5rem 2.5rem 1.5rem;
   min-height: 100vh;
   font-weight: normal;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 a, .green {
@@ -24,12 +28,18 @@ a:hover {
   color: var(--accent-color);
 }
 
-/* Remove .green coloring for new palette */
-/* Responsive utility classes */
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   #app {
-    padding: 1rem 0.3rem;
+    padding: 1.25rem 0.7rem;
+    min-width: 0;
+    font-size: 0.98rem;
   }
 }
 
-/* Remove grid default for #app in modern layout */
+@media (max-width: 700px) {
+  #app {
+    padding: 0.59rem 0.07rem;
+    min-width: 0;
+    font-size: 0.97rem;
+  }
+}

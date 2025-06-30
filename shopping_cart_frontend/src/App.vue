@@ -55,6 +55,7 @@ import { RouterLink, RouterView } from 'vue-router'
 .nav {
   display: flex;
   gap: 1.3rem;
+  flex-wrap: wrap;
 }
 
 .nav a {
@@ -70,5 +71,31 @@ import { RouterLink, RouterView } from 'vue-router'
 .nav a:hover {
   background: var(--secondary-color);
   color: #212101;
+}
+
+@media (max-width: 650px) {
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.75rem 0.7rem 0.67rem 0.65rem;
+    gap: 0.5rem;
+  }
+  .header-left {
+    gap: 1.1rem;
+  }
+  .brand {
+    font-size: 1.05rem;
+  }
+  .brand-icon {
+    font-size: 1.5rem;
+    margin-right: 0.28rem;
+  }
+  .nav {
+    gap: 0.68rem;
+  }
+  .nav a {
+    font-size: 0.96rem;
+    padding: 0.18rem 0.5rem;
+  }
 }
 </style>
