@@ -97,7 +97,11 @@ defineEmits(['add', 'remove'])
 
 .product-actions {
   display: flex;
-  gap: 0.18rem;
+  gap: 0.5rem;
+  flex-wrap: wrap; /* Allow buttons to flow to new line if needed */
+  justify-content: flex-end; /* Align to the right (for cleaner breakpoint handling) */
+  width: 100%;
+  margin-top: 0.18rem;
 }
 
 .btn {
@@ -164,6 +168,11 @@ defineEmits(['add', 'remove'])
     font-size: 0.96rem;
     padding: 0.27rem 1.19rem;
     min-width: 82px;
+    margin-top: 0.12rem;
+    margin-bottom: 0.12rem;
+  }
+  .product-actions {
+    gap: 0.8rem;
   }
   .cart-qty {
     font-size: 0.95rem;
@@ -245,6 +254,9 @@ defineEmits(['add', 'remove'])
     font-size: 1.17rem;
     padding: 0.43rem 1.95rem;
     min-width: 140px;
+  }
+  .product-actions {
+    gap: 1.2rem;
   }
   .cart-qty {
     font-size: 1.21rem;

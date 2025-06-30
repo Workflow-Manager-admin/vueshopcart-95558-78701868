@@ -3,15 +3,12 @@
 > vite dev --port 3000 --host 0.0.0.0
 
 
-  VITE v6.1.0  ready in 525 ms
+  VITE v6.1.0  ready in 553 ms
 
   ➜  Local:   http://localhost:3000/
   ➜  Network: http://172.17.0.2:3000/
   ➜  Vue DevTools: Open http://localhost:3000/__devtools__/ as a separate window
   ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
-5:14:21 AM [vite] (client) hmr update /src/assets/main.css
-5:14:33 AM [vite] (client) hmr update /src/views/HomeView.vue?vue&type=style&index=0&scoped=b4e148ca&lang.css
-5:14:45 AM [vite] (client) hmr update /src/components/ProductList.vue?vue&type=style&index=0&scoped=32d040e6&lang.css
-5:15:10 AM [vite] (client) hmr update /src/components/ProductCard.vue?vue&type=style&index=0&scoped=a4cce9c2&lang.css
-5:15:38 AM [vite] (client) hmr update /src/components/CartSummary.vue?vue&type=style&index=0&scoped=df5b7e1f&lang.css
-5:15:52 AM [vite] (client) hmr update /src/App.vue?vue&type=style&index=0&scoped=7a7a37b1&lang.css
+5:17:14 AM [vite] (client) hmr update /src/components/ProductCard.vue?vue&type=style&index=0&scoped=a4cce9c2&lang.css
+5:17:23 AM [vite] (client) hmr update /src/components/ProductCard.vue?vue&type=style&index=0&scoped=a4cce9c2&lang.css
+5:17:34 AM [vite] (client) hmr update /src/components/ProductCard.vue?vue&type=style&index=0&scoped=a4cce9c2&lang.css
