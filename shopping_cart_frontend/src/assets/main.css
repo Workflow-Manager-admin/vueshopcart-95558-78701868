@@ -1,0 +1,35 @@
+@import './base.css';
+
+body {
+  background: var(--color-background);
+}
+
+#app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.2rem 1.5rem 2.5rem 1.5rem;
+  min-height: 100vh;
+  font-weight: normal;
+}
+
+a, .green {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+a:hover {
+  background: #e6ffe7;
+  color: var(--accent-color);
+}
+
+/* Remove .green coloring for new palette */
+/* Responsive utility classes */
+@media (max-width: 700px) {
+  #app {
+    padding: 1rem 0.3rem;
+  }
+}
+
+/* Remove grid default for #app in modern layout */

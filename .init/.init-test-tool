@@ -1,0 +1,4 @@
+{
+    "command": "npm run test:unit",
+    "working_directory": "/home/kavia/workspace/code-generation/vueshopcart-95558-78701868/shopping_cart_frontend"
+}
