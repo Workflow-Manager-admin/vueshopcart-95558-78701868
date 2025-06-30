@@ -35,6 +35,7 @@ const getQtyInCart = (pid: number) => {
   margin-top: 0.3rem;
 }
 
+/* Two columns for larger mobiles/tablets */
 @media (min-width: 480px) {
   .product-list {
     grid-template-columns: repeat(2, 1fr);
@@ -42,6 +43,7 @@ const getQtyInCart = (pid: number) => {
   }
 }
 
+/* Three columns for large tablets/small laptops */
 @media (min-width: 700px) {
   .product-list {
     grid-template-columns: repeat(3, 1fr);
@@ -49,10 +51,27 @@ const getQtyInCart = (pid: number) => {
   }
 }
 
-@media (min-width: 1100px) {
+/* 1024px: Typical laptop - slightly wider, more roomy gaps */
+@media (min-width: 1024px) {
+  .product-list {
+    grid-template-columns: repeat(3, 1fr); /* 4 is crowded until 1280 */
+    gap: 1.4rem 1.9rem;
+  }
+}
+
+/* 1280px: 4 columns, bigger gap */
+@media (min-width: 1280px) {
   .product-list {
     grid-template-columns: repeat(4, 1fr);
-    gap: 1.4rem 2.1rem;
+    gap: 1.7rem 2.4rem;
+  }
+}
+
+/* 1440px: 4 columns, very broad gap for luxury of space */
+@media (min-width: 1440px) {
+  .product-list {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.2rem 3rem;
   }
 }
 </style>

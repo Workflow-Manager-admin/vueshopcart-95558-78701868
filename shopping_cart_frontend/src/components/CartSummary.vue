@@ -38,29 +38,31 @@ function removeAll(productId: number) {
 </template>
 
 <style scoped>
+/* MOBILE-FIRST DEFAULTS */
 .cart-summary {
   background: #fffefb;
   border-radius: 1rem;
   box-shadow: 0 4px 16px rgba(255, 193, 7, 0.08), 0 2px 6px rgba(76,175,80,0.07);
-  padding: 1rem 0.9rem 0.7rem 0.9rem;
+  padding: 0.7rem 0.5rem 0.5rem 0.65rem;
   width: 100%;
-  max-width: 380px;
+  max-width: 99vw;
   min-width: 0;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.15rem;
+  font-size: 1rem;
   box-sizing: border-box;
 }
 
 .cart-summary h3 {
   color: var(--primary-color);
-  font-size: 1.18rem;
-  margin-bottom: 0.7rem;
+  font-size: 1.09rem;
+  margin-bottom: 0.48rem;
   text-align: left;
 }
 
 .empty-cart {
   color: #888;
-  font-size: 1rem;
-  padding: 0.7rem 0.3rem;
+  font-size: 0.91rem;
+  padding: 0.45rem 0.27rem;
   text-align: center;
 }
 
@@ -73,15 +75,15 @@ function removeAll(productId: number) {
 .cart-item {
   display: flex;
   align-items: center;
-  gap: 0.7rem;
-  margin-bottom: 10px;
-  padding-bottom: 7px;
+  gap: 0.56rem;
+  margin-bottom: 8px;
+  padding-bottom: 4px;
   border-bottom: 1px solid #ececec;
 }
 
 .cart-item img {
-  width: 38px;
-  height: 38px;
+  width: 30px;
+  height: 30px;
   border-radius: 7px;
   background: #f2f2f2;
   object-fit: cover;
@@ -90,13 +92,13 @@ function removeAll(productId: number) {
 .cart-item-title {
   color: var(--primary-color);
   font-weight: 600;
-  font-size: 1.04rem;
+  font-size: 0.98rem;
 }
 
 .cart-item-desc {
   display: block;
   color: #444;
-  font-size: 0.91rem;
+  font-size: 0.83rem;
 }
 
 .btn.secondary {
@@ -104,11 +106,11 @@ function removeAll(productId: number) {
   color: #27270a;
   border: none;
   border-radius: 0.4rem;
-  padding: 0.25rem 0.8rem;
+  padding: 0.16rem 0.65rem;
   cursor: pointer;
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   transition: background 0.14s;
-  min-width: 72px;
+  min-width: 56px;
 }
 
 .btn.secondary:hover,
@@ -117,46 +119,107 @@ function removeAll(productId: number) {
 }
 
 .cart-total {
-  margin-top: 1.1rem;
+  margin-top: 0.81rem;
   font-weight: bold;
-  font-size: 1.14rem;
+  font-size: 1.06rem;
   color: var(--accent-color);
   text-align: right;
   letter-spacing: 0.05em;
 }
 
-/* Responsive tweaks: shrink padding and sizing for mobile */
-@media (max-width: 700px) {
+@media (min-width: 700px) {
   .cart-summary {
-    max-width: 99vw;
-    min-width: 0;
-    margin-bottom: 1.15rem;
-    padding: 0.7rem 0.45rem 0.3rem 0.5rem;
-  }
-
-  .cart-summary h3 {
+    max-width: 370px;
     font-size: 1.07rem;
+    padding: 1.1rem 0.9rem 0.7rem 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  .cart-summary h3 {
+    font-size: 1.15rem;
+  }
+  .cart-item {
+    gap: 0.66rem;
+    margin-bottom: 10px;
+    padding-bottom: 7px;
+  }
+  .cart-item img {
+    width: 38px;
+    height: 38px;
   }
   .cart-item-title {
-    font-size: 0.97rem;
+    font-size: 1.06rem;
   }
   .cart-item-desc {
-    font-size: 0.87rem;
+    font-size: 0.91rem;
   }
   .btn.secondary {
-    font-size: 0.88rem;
-    padding: 0.21rem 0.55rem;
-    min-width: 56px;
+    font-size: 0.95rem;
+    padding: 0.23rem 0.85rem;
+    min-width: 74px;
+  }
+  .cart-total {
+    font-size: 1.13rem;
+    margin-top: 1.07rem;
   }
 }
 
-@media (max-width: 430px) {
+/* LAPTOP 1024PX - extra padding, font upsize */
+@media (min-width: 1024px) {
   .cart-summary {
-    font-size: 0.98rem;
-    padding: 0.48rem 0.22rem 0.13rem 0.34rem;
+    max-width: 400px;
+    font-size: 1.13rem;
+    padding: 1.35rem 1.18rem 0.91rem 1.18rem;
   }
   .cart-summary h3 {
-    font-size: 0.97rem;
+    font-size: 1.21rem;
+  }
+  .btn.secondary {
+    font-size: 1.02rem;
+    padding: 0.3rem 1.09rem;
+    min-width: 92px;
+  }
+  .cart-total {
+    font-size: 1.24rem;
+  }
+}
+
+/* 1280px - wider sidebar, more upsize */
+@media (min-width: 1280px) {
+  .cart-summary {
+    max-width: 440px;
+    font-size: 1.17rem;
+    padding: 1.65rem 1.33rem 1.17rem 1.33rem;
+  }
+  .cart-summary h3 {
+    font-size: 1.27rem;
+  }
+  .btn.secondary {
+    font-size: 1.08rem;
+    padding: 0.36rem 1.29rem;
+    min-width: 110px;
+  }
+  .cart-total {
+    font-size: 1.31rem;
+  }
+}
+
+/* 1440px - maximum comfort, everything roomy */
+@media (min-width: 1440px) {
+  .cart-summary {
+    max-width: 520px;
+    font-size: 1.21rem;
+    padding: 1.93rem 1.77rem 1.41rem 1.77rem;
+  }
+  .cart-summary h3 {
+    font-size: 1.36rem;
+  }
+  .btn.secondary {
+    font-size: 1.18rem;
+    padding: 0.41rem 1.49rem;
+    min-width: 130px;
+  }
+  .cart-total {
+    font-size: 1.39rem;
   }
 }
 </style>
